@@ -1,31 +1,49 @@
 package rocks.zipcode.io.quiz4.collections;
 
+import javax.xml.soap.Node;
+import java.util.*;
+
 /**
  * @author leon on 11/12/2018.
  */
-public class SimpleStringGroup {
+public class SimpleStringGroup implements Iterable<String>{
+    ArrayList<String> myList;
+
     public SimpleStringGroup() {
-        throw new UnsupportedOperationException("Method not yet implemented");
+        this.myList = new ArrayList<>();
     }
 
     public Integer count() {
-        return null;
+
+        return myList.size();
     }
 
     public void insert(String string) {
+        myList.add(string);
+
     }
 
     public Boolean has(String string) {
-        return null;
+        if(myList.contains(string)){
+            return true;
+        }
+        return false;
     }
 
     public String fetch(int indexOfValue) {
-        return null;
+        return myList.get(indexOfValue);
     }
 
     public void delete(String string) {
+            myList.remove(string);
     }
 
     public void clear() {
+        myList.clear();
+    }
+
+    @Override
+    public Iterator iterator() {
+        return myList.iterator();
     }
 }

@@ -11,9 +11,9 @@ public class StringAssembler {
     }
 
     public StringAssembler append(String str) {
-        StringBuilder sb = new StringBuilder(str);
-        sb.append(delimeter);
-        System.out.println(sb);
+//        StringBuilder sb = new StringBuilder(str);
+//        sb.append(delimeter);
+//        System.out.println(sb);
     return null;
 
     }

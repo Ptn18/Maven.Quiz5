@@ -1,17 +1,10 @@
 package rocks.zipcode.io.quiz4.generics;
 
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * @author leon on 18/12/2018.
  */
 public class SortedGroup<_> extends Group<_> {
-    Set<_>myList;
-
-    public SortedGroup(){
-        this.myList = new TreeSet<>();
-    }
 
     @Override
     public void insert(_ value) {
@@ -24,6 +17,6 @@ public class SortedGroup<_> extends Group<_> {
     }
 
     public Integer indexOf(_ value) {
-        return null;
+        return myList.indexOf(value);
     }
 }
